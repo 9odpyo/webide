@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css') }}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/main.js') }}"></script>
+    <title>IDE 90DPyo</title>
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">IDE Pyo</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="#">Python</a>
+        <a class="nav-link" href="#">Java</a>
+        <a class="nav-link" href="#">Shell</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Enter your code.</h1>
+    <p class="lead">When you have finished entering the code and hit the run button, you will see the results.</p>
+    <div class="form-group">
+      <textarea class="form-control" id="python-code-area" rows="15">
+import time
+
+print('test - {} - god - {}'.format('!!', str(2**5)))
+time.sleep(1)
+print('wait 1second')
+time.sleep(2)
+print('wait 2second')
+print('aba')
+      </textarea>
+    </div>
+    <p class="lead">
+      <a href="javascript:runPythonCode()" class="btn btn-lg btn-secondary">Run</a>
+    </p>
+  <textarea class="form-control" id="python-result-area" rows="5"></textarea>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>By <a href="#">90D Pyo</a>.</p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
