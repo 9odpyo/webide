@@ -18,19 +18,21 @@
     <div class="inner">
       <h3 class="masthead-brand">IDE Pyo</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#" data-language="python">Python</a>
-        <a class="nav-link" href="#" data-language="java">Java</a>
-        <a class="nav-link" href="#" data-language="shell">Shell</a>
-        <a class="nav-link" href="#" data-language="javascript">Java script</a>
+        <a class="type-select_button nav-link active" href="#" data-code-type="python">Python</a>
+        <a class="type-select_button nav-link" href="#" data-code-type="shell">Shell</a>
+        <a class="type-select_button nav-link" href="#" data-code-type="java">Java</a>
+        <a class="type-select_button nav-link" href="#" data-language="javascript">Java script</a>
       </nav>
     </div>
   </header>
 
   <main role="main" class="inner cover">
+    <input type="hidden" id="code-type" value="python" />
     <h1 class="cover-heading">Enter your code.</h1>
     <p class="lead">When you have finished entering the code and hit the run button, you will see the results.</p>
     <div class="form-group">
-      <textarea class="form-control" id="code-area" rows="15"></textarea>
+      <textarea class="form-control" id="code-area" rows="15">
+      </textarea>
     </div>
     <p class="lead">
       <a href="javascript:runCode()" class="btn btn-lg btn-secondary">Run</a>
