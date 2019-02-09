@@ -13,8 +13,10 @@ def main():
 @app.route('/runCode', methods=['POST'])
 def run_code():
     code = request.form[u"code"]
+    language = request.form[u"language"]
     print(code)
-    file_path = write_file(code)
+    print(language)
+    file_path = write_file(code, language)
     return jsonify(file_path=file_path)
 
 
