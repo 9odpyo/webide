@@ -10,9 +10,9 @@ def main():
     return render_template('index.html')
 
 
-@app.route('/runPythonCode', methods=['POST'])
-def run_python_code():
-    code = request.form[u"pythonCode"]
+@app.route('/runCode', methods=['POST'])
+def run_code():
+    code = request.form[u"code"]
     print(code)
     file_path = write_file(code)
     return jsonify(file_path=file_path)

@@ -18,9 +18,10 @@
     <div class="inner">
       <h3 class="masthead-brand">IDE Pyo</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Python</a>
-        <a class="nav-link" href="#">Java</a>
-        <a class="nav-link" href="#">Shell</a>
+        <a class="nav-link active" href="#" data-language="python">Python</a>
+        <a class="nav-link" href="#" data-language="java">Java</a>
+        <a class="nav-link" href="#" data-language="shell">Shell</a>
+        <a class="nav-link" href="#" data-language="javascript">Java script</a>
       </nav>
     </div>
   </header>
@@ -29,21 +30,12 @@
     <h1 class="cover-heading">Enter your code.</h1>
     <p class="lead">When you have finished entering the code and hit the run button, you will see the results.</p>
     <div class="form-group">
-      <textarea class="form-control" id="python-code-area" rows="15">
-import time
-
-print('test - {} - god - {}'.format('!!', str(2**5)))
-time.sleep(1)
-print('wait 1second')
-time.sleep(2)
-print('wait 2second')
-print('aba')
-      </textarea>
+      <textarea class="form-control" id="code-area" rows="15"></textarea>
     </div>
     <p class="lead">
-      <a href="javascript:runPythonCode()" class="btn btn-lg btn-secondary">Run</a>
+      <a href="javascript:runCode()" class="btn btn-lg btn-secondary">Run</a>
     </p>
-  <textarea class="form-control" id="python-result-area" rows="5"></textarea>
+  <textarea class="form-control" id="result-area" rows="5"></textarea>
   </main>
 
   <footer class="mastfoot mt-auto">
