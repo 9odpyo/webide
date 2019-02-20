@@ -3,7 +3,14 @@ from subprocess import PIPE
 
 
 def run_file(file_path):
-    sub_p = subprocess.Popen(['python', file_path], stdout=PIPE)
+    cmd = ""
+
+    if file_path.find(".py") != -1:
+        cmd = "python"
+    elif file_path.find(".js") != -1:
+        cmd = "node"
+
+    sub_p = subprocess.Popen([cmd, file_path], stdout=PIPE)
     while True:
         line = sub_p.stdout.readline().decode('utf8')
         if line == '':
